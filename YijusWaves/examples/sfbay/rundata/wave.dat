@@ -1,0 +1,52 @@
+########################################################################
+#
+#  Input file for the wave module in SUNTANS.
+#
+########################################################################
+Mw			10	# Wave frequency resolution
+Nw                      10      # Wave angle resolution
+wnstep                  1       # Wave time step
+sgmin                   0.1     # Minimum wave frequency
+sgmax                   6.28    # Maximum wave frequency
+wind_dt                 360     # Time step for wind data input (sec).
+implicit_whitecap       1       # 1: semi-implicit scheme to solve white capping; 0: explicit scheme to solve white capping
+implicit_advection      1       # 1: implicit scheme to solve transport in geographic space; 0: explicit scheme
+wind_forcing	        1       # 1: wind forcing; 0: no wind, then some BC for waves might be needed, otherwise there is no wave
+nstation                5       # Number of wind stations
+tail_opt                0       # 1: A tail of f^{-tail_pow} is added in the spectrum (based on Booij et al, 1999); 0: no tail is added
+tail_pow                5       # Power for the tail of the action density (sigma_max^tail_pow). It is usually set 4 or 5
+wind_shear              1       # 1: If the wind data that is used for waves is also used as the shear stress on the water surface; 0: no wind shear is applied
+rad_stress              1       # 1: If the hydrodynamics is coupled with waves through the radiation stress; 0: no feadback of waves to hydrodynamics
+form_drag               0       # 1: If the form drag model that parameterizes the friction induced by small bed forms is applied; 0: no bedform-induced friction 
+btm_mud                 1       # 1: If the two-layer mud model (by Ng, Coastal Eng 2000) is applied to model bottom dissipation; 0: no mud
+btm_sedi_erosion        0       # 1: Mud thickness in mud dissipation model is obtained based on sediment pickup; 0: fixed value of "btm_mud_thickness" is used
+depth_fw_cutoff         1       # In case that the bottom drag induced dissipation is not sufficient in very shallow regions, this sets a cutoff depth (in m), below which a big constant fw is used 
+fw_drag                 0.2     # Following the previous one, this is the value set for strong bottom dissipation when water depth is less than depth_fw_cutoff.
+btm_conc                0.05    # Volumetric concentration of the bottom mud used in the wave model when the sediment model is off
+btm_vis                 0.0001   # Viscosity of bottom mud for mud dissipation model
+btm_mud_thickness       0.2     # Thickness of the bottom mud for mud dissipation model when its connection to sediment erosion is turned off
+depth_brk_cutoff        1       # 1 if a cutoff depth for depth-induced breaking is applied; 0 if no cutoff depth
+depth_brk_indx          0.7     # Depth breaking index: The proportion of the depth of the maximum wave height 
+NLtriad                 0       # 1 if the triad non linear interaction is turned on
+NLquad                  0       # 1 if the quad non linear interaction is turned on
+BRKdepth                0       # 1 if the depth-induced breaking is turned on
+################################################################################################
+## In what follows are x- and y-coordinates of each wind stations as well as wind data input
+## files. These are all NOAA wind stations and all the data files are obtained from the NOAA
+## website. 
+###############################################################################################
+xw.1                    569823
+yw.1                    4151374
+xw.2                    561795
+yw.2                    4180713
+xw.3                    552730
+yw.3                    4198033
+xw.4                    584221
+yw.4                    4212537
+xw.5                    547095
+yw.5                    4184499      
+WindFile.1              wind2009_Redwood.txt.0
+WindFile.2              wind2009_Alameda.txt.0
+WindFile.3              wind2009_Richmond.txt.0
+WindFile.4              wind2009_PortChicago.txt.0
+WindFile.5              wind2009_SanFrancisco.txt.0

@@ -1,0 +1,58 @@
+########################################################################
+#
+#  Input file for the sediment module in SUNTANS.
+#
+########################################################################
+NL			3	# Number of bed layers (MAX = 5)
+spwght                  2.65    # Specific weight of the sediment particle
+diam                    0.0001  # Mean diameter of the sediment particle (m)
+gamma                   0.2     # Coefficient for flocculated settling velcoity 
+Chind                   0.1     # Concentration (in volumetric fraction) criterion for hindered settling velocity
+Cfloc                   0.02    # Concentration (in volumetric fraction) criterion for flocculated settling velcoity
+k                       0.0002  # Constant coefficient for settling velocity as a function of conc.
+Kb                      0.001    # Bottom length scale
+Kagg                    14.6     # Aggregation coefficient (dimensionless)
+Kbrk                    14       # Break-up coefficient (dimensionless)
+Fy                      0.0000000001  #Yield strength (N)
+nf                      2.5           #Fractal dimension (0~3, usually 2~3)
+q                       0.5           #Constant coefficient in the breakup formulation
+Nsize                   2             #Number of the size classes. Only the values less or equal to 2 are allowed. If more are needed, the code needs to be modified
+ws_mic                  -0.0002        #Settling velocity of the micro floc (m/s)
+ws_mac                  -0.004         #Settling velocity of the macro floc (m/s)
+btm_partition_mic       0.2           #Partition of micro floc in the bed material (ranges from 0 to 1) 
+size_exchange           0            #1: allow for size exchange between different classes (for mud); 0: no size exchange (sand)
+diam_min                0.00004       #Minimum floc size
+diam_max                0.0002        #Maximum floc size
+Dp                      0.00004       #Diameter of the primary particle (in m)
+vis                     0.1          #Viscosity of bottom mud(defaut 0.1)
+strati                  0             # 1: turn on sediment-induced stratification; 0: turn off 
+Dl1                     75000     # Dry density (g/m^3)
+Dl2                     530000     #
+Dl3                     1200000     #
+Dl4                     900000     #
+Dl5                     900000     #
+Tcsl1                   0.1   # Critical Shear Stress (N/m^2)
+Tcsl2                   0.4    #
+Tcsl3                   1.2    #
+Tcsl4                   0.9    #
+Tcsl5                   0.9    #
+E1                      0.01   # Erosion Rate Constant (g/m^2/s)
+E2                      0.01   #                   
+E3                      0.01   #                   
+E4                      0.02   #                   
+E5                      0.02   #                   
+alpha1                  3.5     # Empirical coef. for the erosion rate
+alpha2                  3.5    #
+alpha3                  3.5    #
+alpha4                  3.5    #
+alpha5                  3.5    #
+cnsd1                   0.0002   # Consolidation rate (g/m^2/s)
+cnsd2                   0.0002  # 
+cnsd3                   0.0002  # 
+cnsd4                   0.0002  # 
+cnsd5                   0.0002  # 
+hl1                     0.1    # Layer thickness (m)
+hl2                     0.5     #
+hl3                     4.0     #
+hl4                     2.0     #
+hl5                     2.0     #

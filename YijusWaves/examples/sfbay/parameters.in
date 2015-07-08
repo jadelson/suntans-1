@@ -1,0 +1,13 @@
+# Commonly changed parameters
+TAGNAME=sfbay_spinout_test
+NPROCS=16
+MAXRUNS=1
+GRIDONLY=0
+JOBTIME=240:00:00
+SCRIPTFILE=pbs-script.sh
+SUNTANSHOME=/home/knelson/Documents/suntans/yiju3_2_21_2015/suntans-sfbay-sedi-wave3-spinup
+SUNGRIDOPTIONS=".g"
+GRIDVERBOSE=-vvv
+SUNVERBOSE=-vvv
+SCRATCH=/home/knelson/Documents/suntans/yiju3_2_21_2015/suntans-sfbay-sedi-wave3-spinup
+QUEUE=standard
