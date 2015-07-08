@@ -11,4 +11,7 @@ main/sunplot
 data/
 *.dat.*
 
-
+# Other files
+.ds_store
+.DS_Store
+*.DS_Store
